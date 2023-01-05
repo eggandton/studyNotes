@@ -7,19 +7,8 @@ import java.util.Map;
 public class IdentityHashMapNotes {
 
     /*
-    1 使用IdentityHashMap的时候，key可以是任意类型，value可以是任意类型
-    2 IdentityHashMap的key是无序的，key的顺序是随机的
-    3 IdentityHashMap的key是不可重复的，如果有重复的key，后面的会覆盖前面的
-    4 IdentityHashMap的key是可以为null的，如果为null，不会抛出NullPointerException
-    5 IdentityHashMap的key是可以修改的，如果修改，不会抛出UnsupportedOperationException
-    6 IdentityHashMap的key是线程不安全的，不可以在多线程中使用
-    7 IdentityHashMap的key是可以变的，如果修改，不会抛出UnsupportedOperationException
-    8 IdentityHashMap的key是可以序列化的，如果序列化，不会抛出NotSerializableException
-    9 IdentityHashMap的key是可以反序列化的，如果反序列化，不会抛出InvalidClassException
-    10 IdentityHashMap的key是可以克隆的，如果克隆，不会抛出CloneNotSupportedException
-    11 IdentityHashMap的key是可以比较的，如果比较，不会抛出ClassCastException
-    12 IdentityHashMap的key比较的==而不是hashcode,hashmap比较的是hashcode
-     */
+    IIdentityHashMap的key是通过==来判断是否相等的，而不是通过equals来判断是否相等的，所以IdentityHashMap的key可以是任意类型，包括null
+    */
     public static void main(String[] args) {
         IdentityHashMap<String, String> map = new IdentityHashMap<>();
         map.put("a", "a");
