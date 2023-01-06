@@ -1,5 +1,7 @@
 package com.zql.collection.map;
 
+import java.util.HashMap;
+
 public class HashMapNotes {
 
     /*
@@ -11,6 +13,13 @@ public class HashMapNotes {
      */
     public static void main(String[] args) {
 
+        HashMap<String, String> hashMap = new HashMap<>();
+        hashMap.put("c", "c");
+        hashMap.put("d", "d");
+        hashMap.put("a", "a");
+        hashMap.put("b", "b");
+
+        System.out.println(hashMap);
     }
 
 }
